@@ -50,7 +50,7 @@ if(rising_edge(clk)) then
 		if(next_data = '1' and state = '1' and i<8) then 
 			data_read(8*i + 7 downto 8*i) <= data_in;
 			i := i + 1;
-			state <= 0;
+			state <= '0';
 		elsif(next_data = '0' and state = '0') then
 			state <= '1';
 			i := i;
